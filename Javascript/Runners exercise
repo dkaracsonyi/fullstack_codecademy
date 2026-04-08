@@ -1,0 +1,25 @@
+let raceNumber = Math.floor(Math.random() * 1000);
+let earlyBird = false;
+let runnerAge = 19;
+
+//exit if the runner is exactly 18
+if (runnerAge === 18){
+  console.log("Please check registration desk.");
+return;
+}
+
+//assign the number for adults
+if (runnerAge > 18 && earlyBird === true) {
+  raceNumber+=1000;
+}
+
+if (runnerAge > 18 && earlyBird === true) {
+  console.log("Your number is " + raceNumber + " and you start at 9:30 am. Good luck!");
+} else if (runnerAge > 18 && earlyBird === false) {
+  console.log("Your number is " + raceNumber + " and you start at 11 am. Good luck!");
+}
+
+if (runnerAge < 18) {
+  console.log("Your number is " + raceNumber + " and you start at 12:30. Good luck!");
+}
+
