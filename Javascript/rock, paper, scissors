@@ -1,0 +1,79 @@
+const getUserChoice = (userInput) => {
+    userInput = userInput.toLowerCase();
+    if (userInput === "rock" || userInput === "paper" || userInput === "scissors"){
+        return userInput;
+    }
+    else if (userInput === "bomb"){
+      return "The player has won";
+    }
+    else {
+        console.log("Choice doesn't fit the game.");
+    }
+}
+
+const getComputerChoice = () =>{
+  let choice = Math.floor(Math.random() * 3);
+
+  if (choice === 0) {
+    return "rock";
+  }
+  else if (choice === 1) {
+    return "paper";
+  }
+  else {
+    return "scissors";
+  }
+}
+
+function determineWinner(userChoice, computerChoice){
+  if (userChoice === "bomb") {
+    return "The player has won unanimously";
+  }
+  if (userChoice === computerChoice) {
+    return "It was a tie";
+  }
+  else {
+    if (userChoice === "rock"){
+      if (computerChoice === "paper"){
+        return "The computer won";
+      }
+      else {
+        return "The user won";
+      }
+    }
+    if (userChoice === "paper"){
+      if (computerChoice === "scissors"){
+        return "The computer won";
+      }
+      else {
+        return "The user won";
+      }
+    }
+    if (userChoice === "scissors"){
+      if (computerChoice === "rock"){
+        return "The computer won";
+      }
+      else {
+        return "The user won";
+      }
+    }
+  }
+}
+
+/** 
+const userChoice = getUserChoice("scissors");
+const computerChoice = getComputerChoice();
+console.log("User picked: " + userChoice);
+console.log("Computer picked: " + computerChoice);
+console.log(determineWinner(userChoice, computerChoice));
+*/
+
+function playGame(){
+  const userChoice = getUserChoice("bomb");
+  console.log(userChoice);
+  const computerChoice = getComputerChoice();
+  console.log(computerChoice)
+  console.log(determineWinner(userChoice, computerChoice));
+}
+
+playGame();
