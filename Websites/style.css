@@ -1,0 +1,121 @@
+body{
+    font-family: Helvetica;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
+
+header{
+    display: flex;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    top: 0;
+}
+
+.logo {
+    margin-left: 10px;
+    height: 50px;
+}
+
+nav {
+    justify-content: flex-end;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+  margin-left: 10px;
+  text-decoration: underline;
+  color: seashell;
+}
+
+.main{
+      flex-direction: column;
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg);
+  height: 700px;
+
+}
+
+.text {
+  text-align: center;
+  background-color: black;
+  width: 100%;
+}
+
+.gallery-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery img{
+  height: 200px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.gallery figcaption{
+  text-align: center;
+}
+
+.locations {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    background-image: url(https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg);
+    height: 500px;
+}
+
+.locations h2{
+  text-align: center;
+}
+
+.location-row{
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.location-box {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width:300px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+footer{
+  display:flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  gap: 5px;
+}
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.copyright {
+  align-self: flex-end:
+}
